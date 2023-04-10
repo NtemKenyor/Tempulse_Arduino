@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- fontawesome cdn -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+        <meta name="description" id="meta_description"
+            content="Local area connection to collect the data from various Tempulse devices" />
+        <meta name="keywords"
+            content="Tempulse Data Dashboard " />
+    
+    <title>Tempulse Data Center</title>
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+        apiKey: "<API_KEY>",
+        authDomain: "<PROJECT_ID>.firebaseapp.com",
+        databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+        storageBucket: "<BUCKET>.appspot.com",
+        messagingSenderId: "<SENDER_ID>",
+    };
+    firebase.initializeApp(config);
+    </script>
+</head>
+<body>
+    <style>
+        .the_tables{
+            border: 2px solid #000;
+        }
+        .the_tables tr{
+            width: 100%;
+        }
+        .the_tables tr td{
+            border: 1px solid #000;
+            max-width: 50%;
+            min-width: 12%;
+        }
+        h3 i {
+            vertical-align: text-top;
+        }
+    </style>
+    <center>
+        <div>
+            <canvas>
+    
+            </canvas>
+            <h3> <i class="fa fa-heart" id="j268i67" style="font-size: 54px;"></i> Pulse:  ###Pulse </h3>
+        </div>
+    
+        <div class="the_temp">
+            <h3> <i class="fa fa-thermometer-half" id="z6fejk4"  style="font-size: 54px;"> </i> Temperature: ###Temp </h3>
+        </div>
+    
+    
+        <div class="the_bat">
+            <h3> <i class="fa fa-battery-full" id="sh97z3r" style="font-size: 54px" ></i> Battery: ###Battery </h3>
+        </div>
+    
+        <!-- <div class="the_tables">
+            <table>
+                <tr>
+                    <td>Patient id</td>
+                    <td>Temp</td>
+                    <td>Pulse</td>
+                    <td>Date</td>
+                    <td>Time</td>
+                    <td>Status</td>
+                </tr>
+            </table>
+        </div> -->
+        
+    </center>
+
+</body>
+</html>
